@@ -96,12 +96,12 @@ main {
 
 .published,
 .category {
-  font-size: clamp(12px, 2vw, var(--text-preset3-font-size));
+  font-size: clamp(12px, 3vw, var(--text-preset3-font-size));
 }
 
 .title {
   color: var(--gray-950);
-  font-size: clamp(20px, 4vw, var(--text-preset1-font-size));
+  font-size: clamp(20px, 5.3vw, var(--text-preset1-font-size));
   line-height: var(--text-preset1-line-height);
   letter-spacing: var(--text-preset1-letter-spacing);
 }
@@ -118,7 +118,7 @@ main {
 }
 
 .description p {
-  font-size: clamp(14px, 1vw, 16px);
+  font-size: clamp(14px, 3.5vw, 16px);
   line-height: var(--text-preset2-line-height);
   letter-spacing: var(--text-preset2-letter-spacing);
 }
@@ -127,6 +127,8 @@ main {
   display: flex;
   align-items: center;
   gap: 12px;
+  width: fit-content;
+  height: fit-content;
 }
 
 .author img {
@@ -140,6 +142,7 @@ main {
   font-size: var(--text-preset3-font-size);
   line-height: var(--text-preset3-line-height);
   letter-spacing: var(--text-preset3-letter-spacing);
+  width: auto;
 }
 
 .published,
