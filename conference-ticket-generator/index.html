@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Conference ticket generator</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="assets/images/logo-full.svg" alt="logo" />
+    </header>
+    <main>
+      <section id="form-section">
+        <!-- Form starts -->
+
+        <h2>Your Journey to Coding Conf 2025 Starts Here!</h2>
+        <p class="subtitle">
+          Secure your spot at next year's biggest coding conference.
+        </p>
+        <form id="ticket-form">
+          <div class="form-group">
+            <p>Upload Avatar</p>
+            <label for="avatar" id="avatar-dropbox">
+              <input type="file" id="avatar" accept="image/*" />
+              <div>
+                <img
+                  src="assets/images/icon-upload.svg"
+                  alt="upload image"
+                /></div
+            ></label>
+          </div>
+          Drag and drop or click to upload Upload your photo (JPG or PNG, max
+          size: 500KB). Full Name Email Address example@email.com GitHub
+          Username @yourusername Generate My Ticket
+        </form>
+        <!-- Form ends -->
+      </section>
+      <section id="ticket"></section>
+    </main>
+
+    <!-- Generated tickets starts -->
+
+    Congrats,
+    <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
+    <!-- Email Address -->
+    and will send updates in the run up to the event. Coding Conf Jan 31, 2025 /
+    Austin, TX
+
+    <!-- Generated tickets ends -->
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </body>
+</html>
