@@ -40,18 +40,41 @@
         <form id="ticket-form">
           <div class="form-group">
             <p>Upload Avatar</p>
-            <label for="avatar" id="avatar-dropbox">
-              <input type="file" id="avatar" accept="image/*" />
-              <div>
-                <img
-                  src="assets/images/icon-upload.svg"
-                  alt="upload image"
-                /></div
-            ></label>
+            <div id="avatar-dropbox">
+            <label for="avatar">
+              <div class="upload-logo">
+                <img src="assets/images/icon-upload.svg" alt="upload image" />
+              </div>
+              <input type="file" id="avatar" accept="image/*" hidden />
+
+              <p>
+                Drag and drop or click to upload 
+              </p>
+            </label> </div>
+            <p class="caution-txt">Upload your photo (JPG or PNG,
+              max size: 500KB).</p>
           </div>
-          Drag and drop or click to upload Upload your photo (JPG or PNG, max
-          size: 500KB). Full Name Email Address example@email.com GitHub
-          Username @yourusername Generate My Ticket
+          <div class="form-group">
+            <label for="name">
+              Full Name
+            </label>
+           <input id="name" />
+          </div>
+          <div class="form-group">
+            <label for="email">
+              Email Address
+            </label>
+           <input type="email" id="email" placeholder=" example@email.com"/>
+          </div>
+          <div class="form-group">
+            <label for="git-username">
+              GitHub Username
+            </label>
+            <input id="git-username" placeholder="@yourusername"/>
+          </div>
+          <div class="form-group"></div>
+            
+        <submit>Generate My Ticket</submit>
         </form>
         <!-- Form ends -->
       </section>
