@@ -37,6 +37,7 @@ body{
     background-size: cover;
     background-position: center center;
     height: 100%;
+    overflow-x: hidden;
 }
 
 header{
@@ -75,6 +76,8 @@ main{
     text-align: left;
     display: grid;
     gap: 15px;
+    margin-bottom: 100px;
+    z-index: 1000;
 }
 
 
@@ -176,13 +179,19 @@ Input[type="submit"]{
 
 .O-hidden{
     overflow: hidden;
+    width: 100vw;
+}
+
+.O-hidden img{
+    width: 100%;
+    
 }
  
 .abs:nth-of-type(2){
     top: -80px;
     left: 3vw;
 }
-/*
+
 .abs:nth-of-type(3){
     top: 70vh;
     right: 18vw;
@@ -193,13 +202,22 @@ Input[type="submit"]{
     right: 0;
 }
 
-.fixed{
-    position:absolute;
-    top: 100%;
+
+.hide{
+    position: fixed;
+    height: auto;
+    width: auto;
     left: 0;
-    z-index: -1;
+    bottom: 0;
     overflow: hidden;
 }
- */
+
+.abs:nth-last-of-type(5) img{
+height: 100%;
+object-fit: cover;
+width: 100%;
+}
+
+
 
 
