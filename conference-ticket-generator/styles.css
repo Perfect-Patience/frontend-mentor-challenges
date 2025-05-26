@@ -37,7 +37,7 @@ body {
     url(../assets/images/pattern-lines.svg),
     url(../assets/images/pattern-circle.svg),
     url(../assets/images/pattern-squiggly-line-top.svg),
-    url(../assets/images/background-desktop.png);
+   url(/frontend-mentor-challenges/conference-ticket-generator/assets/images/background-desktop.png);
   background-repeat: 
   no-repeat,
   no-repeat,
