@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
-
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.12.1/font/bootstrap-icons.min.css"
+    />
     <link
       rel="icon"
       type="image/png"
@@ -30,24 +33,6 @@
       <img src="assets/images/logo-full.svg" alt="logo" />
     </header>
     <main>
-      <div class="O-hidden abs">
-        <img src="assets/images/pattern-lines.svg" alt="design" />
-      </div>
-      <div class="abs">
-        <img src="assets/images/pattern-circle.svg" alt="design" />
-      </div>
-      <div class=" abs">
-        <img src="assets/images/pattern-circle.svg" alt="design" />
-      </div>
-
-      <div class="abs">
-        <img
-          src="assets/images/pattern-squiggly-line-top.svg"
-          alt="design"
-        />
-      </div>
-     
-      <!-- <img src="" alt="" class="abs"> -->
       <section id="form-section">
         <!-- Form starts -->
 
@@ -59,62 +44,114 @@
           <div class="form-group">
             <p class="form-label">Upload Avatar</p>
             <div id="avatar-dropbox">
-              <label for="avatar">
+              <label for="avatar" id="input-label">
                 <div class="upload-logo">
-                  <img src="assets/images/icon-upload.svg" alt="upload image" />
+                  <img
+                    id="uploadedAvatar"
+                    src="assets/images/icon-upload.svg"
+                    alt="upload image"
+                  />
                 </div>
                 <input type="file" id="avatar" accept="image/*" hidden />
 
-                <p>Drag and drop or click to upload</p>
+                <p class="drag-txt">Drag and drop or click to upload</p>
+                <div class="buttons" hidden>
+                  <button class="btn-1 primary">Remove image</button>
+                  <button class="btn-2">Change image</button>
+                </div>
               </label>
             </div>
             <p class="caution-txt">
-              Upload your photo (JPG or PNG, max size: 500KB).
+              <span>
+                <i class="bi bi-exclamation-circle"></i>
+              </span>
+              <span class="caution-message">
+                Upload your photo (JPG or PNG, max size: 500KB).
+              </span>
             </p>
           </div>
           <div class="form-group">
-            <label for="name " class="form-label"> Full Name </label>
-            <input id="name" />
+            <label for="fullName" class="form-label"> Full Name </label>
+            <input type="text" id="fullName" name="username" />
+            <p class="f-name error"><i class="bi bi-exclamation-circle"></i> Name cannot be empty.</p>
           </div>
           <div class="form-group">
             <label for="email" class="form-label"> Email Address </label>
-            <input type="email" id="email" placeholder=" example@email.com" />
+            <input
+              type="email"
+              id="email"
+              placeholder=" example@email.com"
+              name="email"
+            />
+            <p class="email-input error"><i class="bi bi-exclamation-circle"></i> Please enter a valid email address.</p>
           </div>
           <div class="form-group">
             <label for="git-username" class="form-label">
               GitHub Username
             </label>
-            <input id="git-username" placeholder="@yourusername" />
+            <input
+              id="git-username"
+              placeholder="@yourusername"
+              name="git-username"
+              required
+            />
+            <p class="u-name error"><i class="bi bi-exclamation-circle"></i> username cannot be empty.</p>
           </div>
-          <div class="form-group"></div>
 
-          <input type="submit" value="Generate My Ticket" />
+          <input
+            type="submit"
+            id="generate-ticket"
+            value="Generate My Ticket"
+          />
         </form>
         <!-- Form ends -->
       </section>
-      <section id="ticket" hidden>
+      <section id="ticket-section" hidden>
         <!-- Generated tickets starts -->
 
-        Congrats,
-        <!-- Full Name -->! Your ticket is ready. We've emailed your ticket to
-        <!-- Email Address -->
-        and will send updates in the run up to the event. Coding Conf Jan 31,
-        2025 / Austin, TX
+        <h2>
+          Congrats, <span class="full_name">Jonathan Kristoff</span>! <br />
+          Your ticket is ready.
+        </h2>
+        <p class="subtitle">
+          We've emailed your ticket to<br />
+          <span class="email">john@doe.com</span>
+          and will send updates in <br />the run up to the event.
+        </p>
+
+        <div class="ticket">
+          <img class="bg" src="assets/images/pattern-ticket.svg" />
+          <div class="top">
+            <img class="logo" src="assets/images/logo-mark.svg" />
+            <div>
+              <p class="bolded">Coding Conf</p>
+              <p class="date">Jan 31, 2025 / Austin, TX</p>
+            </div>
+          </div>
+          <div class="bottom">
+            <div class="avatar-img">
+              <img class="qweety" src="assets/images/image-avatar.jpg" />
+            </div>
+            <div class="personal_details">
+              <p class="name">Jonathan Kristoff</p>
+              <p class="github">
+                <img src="assets/images/icon-github.svg" alt="" /><span>@jonatankristof0101</span
+                >
+              </p>
+            </div>
+          </div>
+          <div class="rotated-text">#01609</div>
+        </div>
 
         <!-- Generated tickets ends --->
       </section>
-     
     </main>
-    <div class=" hide">
-      <img
-        src="assets/images/pattern-squiggly-line-bottom.svg"
-        alt="design"
-      />
-    </div>
+
     <div class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
-      Coded by <a href="#">Your Name Here</a>.
+      Coded by <a href="#">Perfect Patience Dah</a>.
     </div>
   </body>
+  <script src="script.js"></script>
 </html>

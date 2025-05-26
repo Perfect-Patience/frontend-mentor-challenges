@@ -1,223 +1,334 @@
 @font-face {
-    font-family: "inconsolata" ;
-    src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
+  font-family: "inconsolata";
+  src: url(assets/fonts/Inconsolata-VariableFont_wdth\,wght.ttf);
 }
-:root{
+:root {
+  --transparent-color: rgba(255, 255, 255, 0.089);
+  --neutral-0: hsl(0, 0%, 100%);
+  --neutral-300: hsl(252, 6%, 83%);
+  --neutral-500: hsl(245, 15%, 58%);
+  --neutral-700: hsl(245, 19%, 35%);
+  --neutral-900: hsl(248, 70%, 10%);
 
-    --transparent-color: rgba(255, 255, 255, 0.089);
-    --neutral-0: hsl(0, 0%, 100%);
-    --neutral-300: hsl(252, 6%, 83%);
-    --neutral-500: hsl(245, 15%, 58%);
-    --neutral-700: hsl(245, 19%, 35%);
-    --neutral-900: hsl(248, 70%, 10%);
-
-    --orange-500: hsl(7, 88%, 67%);
-    --orange-700: hsl(7, 71%, 60%);
-
-    
+  --orange-500: hsl(7, 88%, 67%);
+  --orange-700: hsl(7, 71%, 60%);
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "inconsolata";
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "inconsolata";
 }
 
-body{
-    padding: 10px 0;
-    width: 100vw;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    background-image:url(assets/images/background-desktop.png) ;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 100%;
-    overflow-x: hidden;
-}
-
-header{
-height: 35px;
-}
-
-main{
-    padding-top: 50px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    
-}
-
-#form-section{
-    text-align: center;
-    max-width: 65%;
-    
-}
-
-
-#form-section h2{
-    color: var(--neutral-0);
-    font-size: 2.8rem;
-}
-.subtitle{
-    font-size: 20px;
-    margin: 1.6rem 0;
-    color: var(--neutral-300);
-    font-weight: 400;
-}
-#ticket-form{
-    width: 76%;
-    margin: auto;
-    text-align: left;
-    display: grid;
-    gap: 15px;
-    margin-bottom: 100px;
-    z-index: 1000;
-}
-
-
-#avatar-dropbox{
-    margin: 10px 0;
-    border-radius: 10px;
-    width: 100%;
-    height: 140px;
-    border: dashed var(--neutral-500) 2px;
-    padding: 15px;
-    background-color:rgba(255, 255, 255, 0.082);
-}
-
-#avatar-dropbox label{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 25px;
-    color: var(--neutral-300);
-}
-
-#avatar-dropbox label p{
-    font-size: 20px;
-}
-
-.upload-logo{
-    width: 2.2rem;
-    height: 2.2rem;
-    padding: 0.15rem;
-    background-color: rgba(255, 255, 255, 0.164);
-    border-radius: 6px;
-}
-
-.upload-logo img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-
-}
-
-#avatar-dropbox p{
-    font-size: small;
-}
-
-.caution-txt{
-font-size: small;
-    color: var(--neutral-500);
-}
-
-.form-group{
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-}
-.form-group input{
-    width: 100%;
-    padding: 12px;
-    background-color: var(--transparent-color);
-    border: solid var(--neutral-500) 1px;
-    outline: none;
-    box-shadow: none;
-    border-radius: 10px;
-    font-size: 1rem;
-    color: var(--neutral-300);
-    
-
-    
-}
-
-.form-label{
-    font-weight: 500;
-    font-size: 20px;
-    color: var(--neutral-300);
-    margin-top: 10px;
-}
-
-Input[type="submit"]{
-    width: 100%;
-    background-color: var(--orange-500);
-    font-size: 1.1rem;
-    padding: 12px;
-    border: none;
-    border-radius: 10px;
-    color: var(--neutral-900);
-    font-weight: 700;
-    margin-bottom: 20px;
-    
-}
-.abs{
-    position: absolute;
-    overflow: hidden;
-}
-
-.abs:nth-of-type(1){
-    top: 0;
-    left: 0;
-}
-
-.O-hidden{
-    overflow: hidden;
-    width: 100vw;
-}
-
-.O-hidden img{
-    width: 100%;
-    
-}
+body {
+  position: relative;
+  padding: 30px 0;
+  width: 100vw;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
  
-.abs:nth-of-type(2){
-    top: -80px;
-    left: 3vw;
+
+  background-image: 
+    url(assets/images/pattern-squiggly-line-bottom.svg),
+    url(assets/images/pattern-lines.svg),
+    url(assets/images/pattern-circle.svg),
+    url(assets/images/pattern-squiggly-line-top.svg),
+    url(/assets/images/background-desktop.png);
+  background-repeat: 
+  no-repeat,
+  no-repeat,
+  no-repeat, 
+  no-repeat,
+  no-repeat;
+
+  background-size:
+   50vw auto,
+   cover,
+   auto auto,
+   auto auto, 
+    cover;
+  background-position: 
+  bottom left,
+  top  center,
+  calc(100% - 30%) calc(100% - 40%),
+  top right,
+  center center;
+
+
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
-.abs:nth-of-type(3){
-    top: 70vh;
-    right: 18vw;
+header {
+  height: 35px;
 }
 
-.abs:nth-of-type(4){
-    top: 40px;
-    right: 0;
+main {
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#form-section,
+#ticket-section {
+  text-align: center;
+  max-width: 60vw;
+  z-index: 1000;
+}
+
+#form-section h2,
+#ticket-section h2 {
+  color: var(--neutral-0);
+  font-size: 2.8rem;
+}
+.subtitle {
+  font-size: 20px;
+  margin: 1.6rem 0;
+  color: var(--neutral-300);
+  font-weight: 400;
+}
+#ticket-form {
+  width: 76%;
+  margin: auto;
+  text-align: left;
+  display: grid;
+  gap: 15px;
+  margin-bottom: 100px;
+}
+
+#avatar-dropbox {
+  margin: 10px 0;
+  border-radius: 10px;
+  width: 100%;
+  height: fit-content;
+  cursor: pointer;
+  border: dashed var(--neutral-500) 2px;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.082);
+}
+
+#avatar-dropbox label {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 25px;
+  cursor: pointer;
+  color: var(--neutral-300);
+}
+
+#avatar-dropbox label p {
+  font-size: 20px;
+}
+
+.upload-logo {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: rgb(51 47 82);
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.upload-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+  border: 2px solid var(--neutral-500);
+}
+
+#avatar-dropbox p {
+  font-size: small;
+}
+
+.caution-txt {
+  font-size: small;
+  color: var(--neutral-500);
+}
+
+.error {
+  color: var(--orange-700);
+}
+
+.form-group {
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  background-color: var(--transparent-color);
+  border: solid var(--neutral-500) 1px;
+  outline: none;
+  box-shadow: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  color: var(--neutral-300);
+}
+
+input:focus {
+  outline: 1px solid var(--neutral-500);
+  outline-offset: 1px;
+}
+
+.form-label {
+  font-weight: 500;
+  font-size: 20px;
+  color: var(--neutral-300);
+  margin-top: 10px;
+}
+
+Input[type="submit"] {
+  width: 100%;
+  background-color: var(--orange-500);
+  font-size: 1.1rem;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  color: var(--neutral-900);
+  font-weight: 700;
+  margin-bottom: 20px;
+  cursor: pointer;
 }
 
 
-.hide{
-    position: fixed;
-    height: auto;
-    width: auto;
-    left: 0;
-    bottom: 0;
-    overflow: hidden;
+
+
+.full_name {
+  background: linear-gradient(to right, var(--orange-500), var(--neutral-0));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.abs:nth-last-of-type(5) img{
-height: 100%;
-object-fit: cover;
-width: 100%;
+.boxFocused {
+  outline: 2px solid var(--neutral-500);
+  outline-offset: 2px;
 }
 
+.email {
+  color: var(--orange-500);
+}
 
+.ticket {
+  margin: 6rem auto 7rem auto ;
+  position: relative;
+  width: 30rem;
+  height: 13.5rem;
+  z-index: 100000;
 
+}
 
+.ticket .bg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.ticket .top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 1rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.ticket .top p:first-of-type {
+  font-size: 27px;
+  font-weight: 700;
+  color: var(--neutral-0);
+}
+
+.top div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.top p {
+  text-align: left;
+}
+
+.date {
+  color: var(--neutral-300);
+  font-size:15px ;
+}
+
+.bottom {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  padding: 1rem;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.bottom .avatar-img {
+  width: 4.5rem;
+  height: 4.5rem;
+}
+
+.avatar-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.2rem;
+}
+
+.name {
+  color: var(--neutral-0);
+  font-size: 23px;
+  font-weight: 400;
+  margin-bottom: .3rem;
+}
+
+.github {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--neutral-300);
+  font-size: 15px;
+}
+
+.rotated-text {
+  position: absolute;
+  right: 1rem;
+  color: var(--neutral-500);
+  rotate: 90deg;
+  top: 6rem;
+}
+
+.attribution {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.ticket img{
+    opacity: 1
+}
+.buttons button{
+    background-color: var(--neutral-700);
+    color: var(--neutral-300);
+    padding: .4rem .5rem;
+    border-radius: .2rem;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+
+}
+
+.primary{
+    text-decoration-line: underline;
+}
